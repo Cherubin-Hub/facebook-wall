@@ -1,13 +1,13 @@
 // Placeholder image for user profile. Replace this file with your own photo (jpg, png, or webp).
-import React, { useRef, useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
+// import Image from "next/image";
 
 import { supabase } from "@/lib/supabaseClient";
 
 function ProfilePhoto() {
   // For demo, use a hardcoded user id. Replace with real user id from auth in production.
   // Use a static placeholder image. Replace "/my-photo.jpg" with your own photo file (jpg, png, or webp) in the public/ directory.
-  const profileUrl = "/my-photo.jpg";
+  // const profileUrl = "/my-photo.jpg";
 
   const [postText, setPostText] = useState("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -32,10 +32,10 @@ function ProfilePhoto() {
       console.log('Selected file:', selectedFile);
       const fileExt = selectedFile.name.split(".").pop();
       const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}.${fileExt}`;
-      const { data: storageData, error: storageError } = await supabase.storage
+      const { error: storageError } = await supabase.storage
         .from("wall-uploads")
         .upload(fileName, selectedFile, { upsert: false });
-      console.log('Upload result:', { storageData, storageError });
+      // console.log('Upload result:', { storageData, storageError });
       if (!storageError) {
         const { data: publicUrlData } = supabase.storage
           .from("wall-uploads")

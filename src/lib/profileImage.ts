@@ -3,7 +3,7 @@ import { supabase } from "../lib/supabaseClient";
 export async function uploadProfileImage(file: File, userId: string): Promise<string | null> {
   const fileExt = file.name.split('.').pop();
   const filePath = `profile-photos/${userId}.${fileExt}`;
-  const { data, error } = await supabase.storage.from("profile-photos").upload(filePath, file, {
+  const { error } = await supabase.storage.from("profile-photos").upload(filePath, file, {
     upsert: true,
     contentType: file.type,
   });

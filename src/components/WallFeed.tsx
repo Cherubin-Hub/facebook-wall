@@ -108,7 +108,7 @@ export default function WallFeed() {
       // Upload image to Supabase Storage
       const fileExt = imageFile.name.split(".").pop();
       const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}.${fileExt}`;
-      const { data: storageData, error: storageError } = await supabase.storage
+      const { error: storageError } = await supabase.storage
         .from("wall-uploads")
         .upload(fileName, imageFile, { upsert: false });
       if (!storageError) {

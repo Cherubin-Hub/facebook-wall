@@ -5,7 +5,7 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { uploadProfileImage } from "../lib/profileImage";
+// import { uploadProfileImage } from "../lib/profileImage";
 import { supabase } from "../lib/supabaseClient";
 
 
