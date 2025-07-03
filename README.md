@@ -1,4 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# Facebook Wall Demo
+
+This is a modern [Next.js 15](https://nextjs.org) project using React 19, Tailwind CSS, [shadcn/ui](https://ui.shadcn.com/), and [Supabase](https://supabase.com/). It demonstrates a Facebook-like wall with editable profile, photo upload, and personal info modal.
+
+## Features
+
+- Profile photo upload (Supabase Storage)
+- Editable wall name
+- Personal information modal (DOB, gender, civil status, email, phone, city)
+- Wall feed (post list)
+- Responsive sidebar layout
+- Modern UI with Tailwind CSS and shadcn/ui
+
+## Getting Started
 
 ## Getting Started
 
