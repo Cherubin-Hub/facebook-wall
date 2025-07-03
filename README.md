@@ -12,7 +12,7 @@ This is a modern [Next.js 15](https://nextjs.org) project using React 19, Tailwi
 - Responsive sidebar layout
 - Modern UI with Tailwind CSS and shadcn/ui
 
-## Getting Started
+
 
 ## Getting Started
 
